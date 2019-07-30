@@ -1,0 +1,30 @@
+{
+  "name": "mine4",
+  "algorithm": "BayesianOptimization",
+  "trialNumber": 24,
+  "runner": "local_runner",
+  "path": "/home/tony.gao/cloudml-samples/census/estimator/trainer",
+  "command": "./advisor.py",
+  "search_space": {
+      "goal": "MINIMIZE",
+      "maxTrials": 24,
+      "randomInitTrials": 1,
+      "maxParallelTrials": 2,
+      "params": [
+          {
+              "parameterName": "inter_op",
+              "type": "INTEGER",
+              "minValue": 1,
+              "maxValue": 4,
+	      "scalingType": "LINEAR"
+          },
+          {
+              "parameterName": "intra_op",
+              "type": "INTEGER",
+              "minValue": 1,
+              "maxValue": 8,
+	      "scalingType": "LINEAR"
+          }
+      ]
+  }
+}
